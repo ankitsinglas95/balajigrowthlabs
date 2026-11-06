@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Balaji Growth Labs | IT Company in Mohali</title>
+<meta name="description" content="Balaji Growth Labs - website, app and digital growth services in Phase 5, Sector 59, Mohali.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lime:#EAF7C9; --orchid:#F3DFFB; --apricot:#FFE2C6; --aqua:#D2F3F1; --rose:#FFDDE6;
+  --ink:#2B2A5C; --muted:#625F85; --violet:#7A4DFF; --teal:#12B28C; --coral:#FF7A59; --bg:#FDFBFF;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Figtree',sans-serif;color:var(--ink);background:var(--bg);overflow-x:hidden}
+h1,h2,h3,h4,h5,.brand{font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.02em}
+p{color:var(--muted);line-height:1.7}
+section{padding:90px 0}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--violet);outline-offset:2px}
+
+/* navbar */
+.navbar{background:rgba(253,251,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid #EBE3F7}
+.brand{font-weight:800;font-size:1.3rem;color:var(--ink)!important;display:flex;align-items:center;gap:.55rem}
+.brand i{width:36px;height:36px;border-radius:12px 12px 12px 3px;background:linear-gradient(135deg,var(--violet),var(--teal));color:#fff;display:grid;place-items:center;font-size:.95rem;animation:wob 5s ease-in-out infinite}
+@keyframes wob{50%{transform:rotate(-8deg) scale(1.06)}}
+.nav-link{color:var(--muted)!important;font-weight:500}
+.nav-link:hover{color:var(--violet)!important}
+.btn-grow{position:relative;overflow:hidden;background:var(--ink);color:#fff;border-radius:50px;padding:.7rem 1.5rem;font-weight:600;border:0;transition:transform .25s,background .25s}
+.btn-grow:hover{background:var(--violet);color:#fff;transform:translateY(-2px)}
+.btn-grow::after{content:"";position:absolute;top:0;left:-70%;width:40%;height:100%;background:rgba(255,255,255,.35);transform:skewX(-20deg);animation:shine 3.5s infinite}
+@keyframes shine{0%,60%{left:-70%}100%{left:130%}}
+.btn-soft{background:#fff;color:var(--ink);border:1px solid #E0D6F3;border-radius:50px;padding:.7rem 1.5rem;font-weight:600}
+.btn-soft:hover{background:var(--lime);color:var(--ink)}
+
+/* hero */
+.hero{padding:70px 0 90px;position:relative;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(50px);opacity:.75;z-index:0;animation:drift 14s ease-in-out infinite}
+.b1{width:360px;height:360px;background:var(--orchid);top:-80px;right:-60px}
+.b2{width:300px;height:300px;background:var(--lime);bottom:-80px;left:-60px;animation-delay:-5s}
+.b3{width:220px;height:220px;background:var(--apricot);top:40%;left:42%;animation-delay:-9s}
+@keyframes drift{50%{transform:translate(40px,-30px) scale(1.12)}}
+.hero .container{position:relative;z-index:1}
+.hero h1{font-size:clamp(2.3rem,5.2vw,4rem);font-weight:800;line-height:1.08}
+.type{display:inline-block;color:var(--violet);border-right:3px solid var(--coral);padding-right:4px;animation:blink .8s step-end infinite}
+@keyframes blink{50%{border-color:transparent}}
+.hero p.lead{font-size:1.15rem;max-width:34rem}
+.chip{display:inline-flex;gap:.5rem;align-items:center;background:#fff;border:1px solid #E0D6F3;border-radius:50px;padding:.35rem .9rem;font-size:.9rem;color:var(--muted)}
+.chip b{width:8px;height:8px;border-radius:50%;background:var(--teal);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(18,178,140,.5)}100%{box-shadow:0 0 0 10px rgba(18,178,140,0)}}
+.trust{display:flex;gap:1.4rem;flex-wrap:wrap;margin-top:1.8rem;color:var(--muted);font-size:.92rem}
+.trust i{color:var(--teal);margin-right:.4rem}
+
+/* growth chart */
+.growth{background:#fff;border-radius:28px;padding:28px 28px 20px;box-shadow:0 24px 60px rgba(122,77,255,.15);position:relative}
+.growth h6{font-family:'Figtree';font-weight:600;color:var(--muted);margin-bottom:1rem}
+.bars{height:220px;display:flex;align-items:flex-end;gap:14px;border-bottom:2px solid #EBE3F7;position:relative}
+.bar{flex:1;border-radius:12px 12px 0 0;height:0;animation:rise 1.2s cubic-bezier(.2,.9,.3,1.1) forwards}
+.bar:nth-child(1){background:var(--aqua);--h:30%;animation-delay:.2s}
+.bar:nth-child(2){background:var(--orchid);--h:42%;animation-delay:.35s}
+.bar:nth-child(3){background:var(--apricot);--h:55%;animation-delay:.5s}
+.bar:nth-child(4){background:var(--rose);--h:72%;animation-delay:.65s}
+.bar:nth-child(5){background:var(--lime);--h:92%;animation-delay:.8s}
+@keyframes rise{to{height:var(--h)}}
+.line{position:absolute;inset:0;width:100%;height:100%}
+.line path{fill:none;stroke:var(--violet);stroke-width:3;stroke-linecap:round;stroke-dasharray:600;stroke-dashoffset:600;animation:draw 2s .9s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.tag{position:absolute;right:-10px;top:-18px;background:var(--teal);color:#fff;border-radius:14px;padding:.45rem .9rem;font-weight:700;font-size:.9rem;animation:float 4s ease-in-out infinite;box-shadow:0 10px 24px rgba(18,178,140,.35)}
+.fi{position:absolute;width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-size:1.2rem;background:#fff;box-shadow:0 12px 26px rgba(43,42,92,.14);animation:float 5s ease-in-out infinite}
+.fi.f1{left:-22px;top:30%;color:var(--coral)}
+.fi.f2{left:18%;bottom:-24px;color:var(--violet);animation-delay:-2s}
+.fi.f3{right:-18px;bottom:28%;color:var(--teal);animation-delay:-3.5s}
+@keyframes float{50%{transform:translateY(-10px)}}
+.months{display:flex;gap:14px;margin-top:8px;font-size:.78rem;color:var(--muted)}
+.months span{flex:1;text-align:center}
+
+/* tech marquee */
+.marq{background:var(--ink);color:#fff;padding:18px 0;overflow:hidden;white-space:nowrap}
+.track{display:inline-flex;gap:3rem;animation:slide 28s linear infinite}
+.marq:hover .track{animation-play-state:paused}
+.track span{font-weight:500;font-size:1.05rem;opacity:.92}
+.track i{margin-right:.6rem;color:var(--lime);font-size:1.3rem;vertical-align:middle}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* services */
+.sec-title{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800}
+.svc{border-radius:24px;padding:30px;height:100%;transition:transform .3s,box-shadow .3s}
+.svc:hover{transform:translateY(-8px) rotate(-.5deg);box-shadow:0 20px 40px rgba(43,42,92,.1)}
+.svc .ic{width:58px;height:58px;border-radius:18px;background:#fff;display:grid;place-items:center;font-size:1.5rem;margin-bottom:1.1rem;transition:transform .5s}
+.svc:hover .ic{transform:rotateY(360deg)}
+.s1{background:var(--aqua)}.s1 .ic{color:#0E8FA3}
+.s2{background:var(--lime)}.s2 .ic{color:#4C9A12}
+.s3{background:var(--orchid)}.s3 .ic{color:var(--violet)}
+.s4{background:var(--apricot)}.s4 .ic{color:var(--coral)}
+.s5{background:var(--rose)}.s5 .ic{color:#D63B6B}
+.s6{background:#E3E6FF}.s6 .ic{color:#4458D8}
+.svc h4{font-size:1.25rem}
+.svc p{margin:0;font-size:.97rem}
+
+/* process */
+.proc{background:linear-gradient(180deg,var(--bg),#F5EEFF)}
+.step{background:#fff;border:1px solid #E7DDF7;border-radius:22px;padding:26px;height:100%;position:relative;transition:transform .3s}
+.step:hover{transform:translateY(-6px)}
+.step .ci{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:1.15rem;background:var(--violet);margin-bottom:.9rem}
+.col-lg-3:nth-child(2) .ci{background:var(--coral)}
+.col-lg-3:nth-child(3) .ci{background:var(--teal)}
+.col-lg-3:nth-child(4) .ci{background:var(--ink)}
+.step p{margin:0;font-size:.95rem}
+@media(min-width:992px){.step::after{content:"";position:absolute;top:50%;right:-26px;width:26px;border-top:2px dashed #C9B8EE}.col-lg-3:last-child .step::after{display:none}}
+
+/* stats */
+.stats{background:linear-gradient(120deg,var(--lime),var(--aqua) 50%,var(--orchid))}
+.stat i{font-size:1.6rem;color:var(--violet);margin-bottom:.4rem}
+.stat h3{font-size:3rem;font-weight:800;margin:0}
+.stat p{margin:0;color:var(--ink);font-weight:500}
+
+/* why */
+.why li{list-style:none;display:flex;gap:.8rem;margin-bottom:1.1rem;color:var(--muted)}
+.why li i{color:var(--teal);font-size:1.15rem;margin-top:.2rem}
+.why-box{background:var(--apricot);border-radius:32px;padding:40px;position:relative;overflow:hidden}
+.why-box::before{content:"\f135";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;right:20px;top:10px;font-size:5rem;color:rgba(255,122,89,.22);animation:fly 6s ease-in-out infinite}
+@keyframes fly{50%{transform:translate(-14px,-14px) rotate(8deg)}}
+.why-box h3{font-weight:800}
+
+/* contact */
+.info{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.4rem}
+.info .ic{flex:none;width:50px;height:50px;border-radius:15px;display:grid;place-items:center;font-size:1.2rem}
+.info h6{margin:0;font-weight:700}
+.info a,.info span{color:var(--muted);text-decoration:none}
+.form-box{background:var(--orchid);border-radius:28px;padding:34px}
+.form-control{border-radius:14px;border:1px solid #DCCDF3;padding:.8rem 1rem}
+.form-control:focus{border-color:var(--violet);box-shadow:0 0 0 .2rem rgba(122,77,255,.15)}
+iframe{border:0;border-radius:24px;width:100%;height:260px}
+
+footer{background:var(--ink);color:#CFCDEB;padding:30px 0}
+footer a{color:#fff;text-decoration:none}
+.soc a{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.1);margin-left:.4rem;transition:background .25s,transform .25s}
+.soc a:hover{background:var(--violet);transform:translateY(-3px)}
+.wa{position:fixed;right:20px;bottom:20px;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-size:1.7rem;z-index:99;animation:pulse 2s infinite}
+
+/* scroll reveal: different directions */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.3,1)}
+.rv.l{transform:translateX(-50px)}
+.rv.r{transform:translateX(50px)}
+.rv.z{transform:scale(.88)}
+.rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.bar{height:var(--h)}.line path{stroke-dashoffset:0}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand brand" href="#home"><i class="fa-solid fa-seedling"></i>Balaji Growth Labs</a>
+    <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><i class="fa-solid fa-bars fs-4"></i></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#process">How we work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#why">Why us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-lg-2"><a class="btn btn-grow" href="tel:+919501875186"><i class="fa-solid fa-phone me-2"></i>9501875186</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 rv l">
+        <span class="chip mb-3"><b></b>Taking new projects from Mohali</span>
+        <h1>We build <span class="type" id="type"></span><br>that make your business grow.</h1>
+        <p class="lead mt-3">Websites, mobile apps and digital marketing for startups and local businesses. One team, from idea to launch and beyond.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="#contact" class="btn btn-grow btn-lg"><i class="fa-solid fa-paper-plane me-2"></i>Get a free quote</a>
+          <a href="#services" class="btn btn-soft btn-lg">See our services</a>
+        </div>
+        <div class="trust">
+          <span><i class="fa-solid fa-circle-check"></i>Clear pricing</span>
+          <span><i class="fa-solid fa-circle-check"></i>On-time delivery</span>
+          <span><i class="fa-solid fa-circle-check"></i>Post-launch support</span>
+        </div>
+      </div>
+      <div class="col-lg-6 rv r">
+        <div class="growth">
+          <span class="tag"><i class="fa-solid fa-arrow-trend-up me-1"></i>+168% leads</span>
+          <span class="fi f1"><i class="fa-solid fa-code"></i></span>
+          <span class="fi f2"><i class="fa-solid fa-mobile-screen"></i></span>
+          <span class="fi f3"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+          <h6>Average client growth, first 5 months</h6>
+          <div class="bars">
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            <svg class="line" viewBox="0 0 400 220" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M40 150 C100 130,120 110,160 100 S250 70,280 55 S340 25,365 18" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </div>
+          <div class="months"><span>Month 1</span><span>Month 2</span><span>Month 3</span><span>Month 4</span><span>Month 5</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true">
+  <div class="track">
+    <span><i class="fa-brands fa-html5"></i>HTML5</span><span><i class="fa-brands fa-css3-alt"></i>CSS3</span><span><i class="fa-brands fa-js"></i>JavaScript</span><span><i class="fa-brands fa-react"></i>React</span><span><i class="fa-brands fa-node-js"></i>Node.js</span><span><i class="fa-brands fa-php"></i>PHP</span><span><i class="fa-brands fa-wordpress"></i>WordPress</span><span><i class="fa-brands fa-android"></i>Android</span><span><i class="fa-brands fa-apple"></i>iOS</span><span><i class="fa-brands fa-google"></i>Google Ads</span>
+    <span><i class="fa-brands fa-html5"></i>HTML5</span><span><i class="fa-brands fa-css3-alt"></i>CSS3</span><span><i class="fa-brands fa-js"></i>JavaScript</span><span><i class="fa-brands fa-react"></i>React</span><span><i class="fa-brands fa-node-js"></i>Node.js</span><span><i class="fa-brands fa-php"></i>PHP</span><span><i class="fa-brands fa-wordpress"></i>WordPress</span><span><i class="fa-brands fa-android"></i>Android</span><span><i class="fa-brands fa-apple"></i>iOS</span><span><i class="fa-brands fa-google"></i>Google Ads</span>
+  </div>
+</div>
+
+<section id="services">
+  <div class="container">
+    <div class="text-center mb-5 rv">
+      <h2 class="sec-title">What we can build for you</h2>
+      <p class="mx-auto" style="max-width:34rem">Pick one service or let us handle everything together.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 rv z"><div class="svc s1"><div class="ic"><i class="fa-solid fa-laptop-code"></i></div><h4>Website Development</h4><p>Fast, mobile-friendly business sites and online stores that are easy for you to update.</p></div></div>
+      <div class="col-md-6 col-lg-4 rv z"><div class="svc s2"><div class="ic"><i class="fa-solid fa-mobile-screen-button"></i></div><h4>Mobile Apps</h4><p>Android and iOS apps with clean design and reliable performance.</p></div></div>
+      <div class="col-md-6 col-lg-4 rv z"><div class="svc s3"><div class="ic"><i class="fa-solid fa-magnifying-glass-chart"></i></div><h4>SEO &amp; Google Ranking</h4><p>Get found by customers who search for your products and services.</p></div></div>
+      <div class="col-md-6 col-lg-4 rv z"><div class="svc s4"><div class="ic"><i class="fa-solid fa-bullhorn"></i></div><h4>Social Media Marketing</h4><p>Ads and content plans for Instagram, Facebook and Google that bring real enquiries.</p></div></div>
+      <div class="col-md-6 col-lg-4 rv z"><div class="svc s5"><div class="ic"><i class="fa-solid fa-pen-ruler"></i></div><h4>UI/UX &amp; Branding</h4><p>Logos, brand kits and app screens that make your business look trusted.</p></div></div>
+      <div class="col-md-6 col-lg-4 rv z"><div class="svc s6"><div class="ic"><i class="fa-solid fa-gears"></i></div><h4>Custom Software</h4><p>CRM, billing and automation tools built around the way you work.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="proc" id="process">
+  <div class="container">
+    <div class="text-center mb-5 rv"><h2 class="sec-title">From idea to launch in four steps</h2></div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3 rv"><div class="step"><div class="ci"><i class="fa-regular fa-comments"></i></div><h5>1. Talk</h5><p>We listen to your goals, budget and timeline.</p></div></div>
+      <div class="col-md-6 col-lg-3 rv"><div class="step"><div class="ci"><i class="fa-solid fa-pen-nib"></i></div><h5>2. Design</h5><p>You see layouts and approve them before we code.</p></div></div>
+      <div class="col-md-6 col-lg-3 rv"><div class="step"><div class="ci"><i class="fa-solid fa-code"></i></div><h5>3. Build</h5><p>We develop, test and share progress every week.</p></div></div>
+      <div class="col-md-6 col-lg-3 rv"><div class="step"><div class="ci"><i class="fa-solid fa-rocket"></i></div><h5>4. Launch</h5><p>Go live, then we support and grow it with you.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-6 col-md-3 stat rv z"><i class="fa-solid fa-diagram-project"></i><h3 data-count="150">0</h3><p>Projects delivered</p></div>
+      <div class="col-6 col-md-3 stat rv z"><i class="fa-solid fa-face-smile"></i><h3 data-count="80">0</h3><p>Happy clients</p></div>
+      <div class="col-6 col-md-3 stat rv z"><i class="fa-solid fa-award"></i><h3 data-count="5">0</h3><p>Years of experience</p></div>
+      <div class="col-6 col-md-3 stat rv z"><i class="fa-solid fa-clock"></i><h3 data-count="24">0</h3><p>Hour reply time</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 rv l">
+        <h2 class="sec-title mb-4">Why businesses choose Balaji Growth Labs</h2>
+        <ul class="why p-0">
+          <li><i class="fa-solid fa-circle-check"></i><span>Clear pricing. No hidden charges.</span></li>
+          <li><i class="fa-solid fa-circle-check"></i><span>Local team in Mohali you can meet in person.</span></li>
+          <li><i class="fa-solid fa-circle-check"></i><span>Weekly updates so you always know the progress.</span></li>
+          <li><i class="fa-solid fa-circle-check"></i><span>Support after launch, not just before it.</span></li>
+        </ul>
+      </div>
+      <div class="col-lg-6 rv r">
+        <div class="why-box">
+          <h3>Have an idea?</h3>
+          <p>Tell us what you want to build. We will reply with a plan and quote within one working day.</p>
+          <a href="#contact" class="btn btn-grow"><i class="fa-solid fa-lightbulb me-2"></i>Start your project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:#fff">
+  <div class="container">
+    <div class="text-center mb-5 rv"><h2 class="sec-title">Let's talk about your project</h2></div>
+    <div class="row g-5">
+      <div class="col-lg-5 rv l">
+        <div class="info"><div class="ic s2"><i class="fa-solid fa-phone"></i></div><div><h6>Call us</h6><a href="tel:+919501875186">+91 95018 75186</a></div></div>
+        <div class="info"><div class="ic s3"><i class="fa-solid fa-location-dot"></i></div><div><h6>Visit us</h6><span>Phase 5, Sector 59, Mohali, Punjab</span></div></div>
+        <div class="info"><div class="ic s4"><i class="fa-brands fa-whatsapp"></i></div><div><h6>WhatsApp</h6><a href="https://wa.me/919501875186" target="_blank" rel="noopener">Chat with us</a></div></div>
+        <iframe title="Map" loading="lazy" src="https://www.google.com/maps?q=Phase+5+Sector+59+Mohali&output=embed"></iframe>
+      </div>
+      <div class="col-lg-7 rv r">
+        <form class="form-box" id="f">
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label" for="n">Your name</label><input id="n" class="form-control" required></div>
+            <div class="col-md-6"><label class="form-label" for="p">Phone number</label><input id="p" type="tel" class="form-control" required></div>
+            <div class="col-12"><label class="form-label" for="m">What do you need?</label><textarea id="m" rows="5" class="form-control" required></textarea></div>
+            <div class="col-12"><button class="btn btn-grow btn-lg" type="submit"><i class="fa-brands fa-whatsapp me-2"></i>Send on WhatsApp</button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <span>&copy; <span id="y"></span> <a href="#home">Balaji Growth Labs</a> &middot; Phase 5, Sector 59, Mohali</span>
+    <span class="soc">
+      <a href="tel:+919501875186" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+      <a href="https://wa.me/919501875186" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    </span>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/919501875186" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+
+// typing text in hero
+const words=['websites','mobile apps','online stores','brands'];
+const tp=document.getElementById('type');
+let wi=0,ci=0,del=false;
+(function tick(){
+  const w=words[wi];
+  tp.textContent=w.slice(0,ci);
+  if(!del&&ci===w.length){del=true;return setTimeout(tick,1500)}
+  if(del&&ci===0){del=false;wi=(wi+1)%words.length}
+  ci+=del?-1:1;
+  setTimeout(tick,del?45:95);
+})();
+
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*90+'ms';io.observe(el)});
+
+// count up
+const co=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target,t=+el.dataset.count;let c=0;
+  const s=setInterval(()=>{c+=Math.ceil(t/40);if(c>=t){c=t;clearInterval(s)}el.textContent=c+(t>=80?'+':'')},35);
+  co.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+
+// form -> WhatsApp
+document.getElementById('f').addEventListener('submit',e=>{
+  e.preventDefault();
+  const t='Hello Balaji Growth Labs,%0AName: '+encodeURIComponent(n.value)+'%0APhone: '+encodeURIComponent(p.value)+'%0ARequirement: '+encodeURIComponent(m.value);
+  window.open('https://wa.me/919501875186?text='+t,'_blank');
+});
+</script>
+</body>
+</html>
